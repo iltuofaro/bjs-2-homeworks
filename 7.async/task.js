@@ -1,3 +1,5 @@
+// НЕ ЗАБУДЬ ИСПРАВИТЬ
+
 class AlarmClock {
   constructor() {
     this.alarmCollection = [];
