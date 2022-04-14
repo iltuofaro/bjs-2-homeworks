@@ -26,6 +26,7 @@ function getArrayParams(arr) {
 }
 
 
+
 // Задание 2
 
 function worker(arr) {
@@ -39,16 +40,19 @@ function worker(arr) {
 }
 
 function makeWork(arrOfArr, func) {
-  let max = -Infinity;
+  let max = 0;
 
   for (let i = 0; i < arrOfArr.length; i++) {
-    if (func(arrOfArr[i]) > max) {
-      max = func(arrOfArr[i]);
+    let result = func(arrOfArr[i]);
+    if (result > max) {
+      max = result;
     }
-  }
+  } 
 
   return max;
 }
+
+
 
 
 // Задание 3
@@ -68,3 +72,28 @@ function worker2(arr) {
   
   return Math.abs(max - min);
 }
+
+/*
+function worker2(arr) {
+  return Math.max(...arr) - Math.min(...arr);
+}
+
+function mincer(arrOfArr, func) {
+  return makeWork(arrOfArr, func);
+}
+*/
+
+/*
+function worker2(arr) {
+  let min, max;
+  min = Infinity;
+  max = -Infinity;
+
+  arr.forEach(item => {
+    min = min > item ? item : min;
+    max = max < item ? item : max;
+  });
+
+  return max - min;
+}
+*/
